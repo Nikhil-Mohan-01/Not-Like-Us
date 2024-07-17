@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("Spawn", 0.7f, 4f);
+        InvokeRepeating("Spawn", 1f, 2f);
     }
 
     // Update is called once per frame

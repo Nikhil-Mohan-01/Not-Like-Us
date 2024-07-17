@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameController gameContoller;
     public float force = 5;
     public Rigidbody2D rb;
     public float rotationSpeed = 500f;
@@ -43,5 +44,13 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply the clamped rotation
         transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "HighTower" || collision.gameObject.tag == "LowTower" || collision.gameObject.tag == "Ground")
+        {
+            GameObject.Find("Game Controller").GetComponent<GameController>().GameOver();
+        }
     }
 }
