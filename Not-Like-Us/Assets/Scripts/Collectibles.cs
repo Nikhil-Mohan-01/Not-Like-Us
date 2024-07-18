@@ -8,14 +8,16 @@ using UnityEngine.UI;
 
 public class Collectibles : MonoBehaviour
 {
-    public TextMeshPro Score;
-    public int score = 0;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private GameController gameController;
+
+    void Start()
     {
-        score++;
+        gameController = FindObjectOfType<GameController>();
     }
-    private void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Score.text = score.ToString();
+        if (other.CompareTag("Player")) {
+            gameController.AddScore(1);
+        }
     }
 }
