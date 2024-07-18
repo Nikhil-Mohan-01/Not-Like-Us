@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         gameOverCanvas.SetActive(true);
+        scoreCanvas.SetActive(false);
         spawner.SetActive(false);
         Time.timeScale = 0;
     }
