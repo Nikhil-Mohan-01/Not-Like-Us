@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        towers.transform.position = new Vector3(5, Random.Range(-height, height), 0);
+        towers.transform.position = new Vector3(5, Random.Range(-height, height), -2);
     }
 
     void Spawn()
