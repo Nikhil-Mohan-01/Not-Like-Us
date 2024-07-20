@@ -10,10 +10,14 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed = 500f;
     public float maxRotationAngle = 45f;
 
+    private AudioManager audioManager;
+
     void Start()
     {
         Time.timeScale = 1;
         rb = GetComponent<Rigidbody2D>();
+
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -21,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             rb.velocity = Vector2.up * force;
+            audioManager.PlayRandomClip();
         }
 
         // Get current rotation in degrees
