@@ -15,7 +15,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayRandomClip()
     {
-        if (clips.Length == 0) return;
+        if (clips.Length == 0 || audioSource.isPlaying) return;
 
         int randomIndex = Random.Range(0, clips.Length);
         audioSource.clip = clips[randomIndex];
