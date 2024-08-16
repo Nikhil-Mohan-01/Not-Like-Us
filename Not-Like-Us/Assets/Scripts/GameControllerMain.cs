@@ -26,4 +26,9 @@ public class GameControllerMain : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+
+    public void Controls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
 }
