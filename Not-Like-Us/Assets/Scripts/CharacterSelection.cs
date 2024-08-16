@@ -39,7 +39,11 @@ public class CharacterSelection : MonoBehaviour
     {
         if (Kendrick)
         {
-            Instantiate(KendrickPlayer);
+            Instantiate(KendrickPlayer, new Vector3(0, 0, -2), Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(NikhilPlayer, new Vector3(0, 0, -2), Quaternion.identity);
         }
     }
 }
