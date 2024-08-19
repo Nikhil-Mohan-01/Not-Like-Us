@@ -3214,7 +3214,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b1f29de0cfba242a09a6e0bc0223c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towers: {fileID: 1239212508234986848, guid: 815afae125d609c468faa8cfa8a53ddd, type: 3}
+  towers:
+  - {fileID: 1239212508234986848, guid: 456c02ff6b5104d4d8b1ed7977e1e7c1, type: 3}
+  - {fileID: 1239212508234986848, guid: 60d441b255372e34ba580cad2132969f, type: 3}
+  - {fileID: 1239212508234986848, guid: 815afae125d609c468faa8cfa8a53ddd, type: 3}
   height: 2
 --- !u!4 &1458239738
 Transform:
@@ -4174,7 +4177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6320130906448876334, guid: 7d9c8d29f9b20684cbdb18a1d64dad8b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

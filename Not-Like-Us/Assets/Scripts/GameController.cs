@@ -47,4 +47,9 @@ public class GameController : MonoBehaviour
         score += amount;
         UpdateScoreText();
     }
+
+    public int GetScore()
+    {
+        return score;
+    }
 }
