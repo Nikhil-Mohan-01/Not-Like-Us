@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private AudioManager audioManager;
 
     public GameObject bullet;
+    public float shootDelay = 1.0f;
+    private bool canShoot = true;
 
     void Start()
     {
@@ -30,10 +32,9 @@ public class PlayerMovement : MonoBehaviour
             audioManager.PlayRandomClip();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canShoot)
         {
-            Debug.Log("Shoot");
-            Instantiate(bullet, transform.position, Quaternion.identity);
+            StartCoroutine(ShootWithDelay());
         }
 
         // Get current rotation in degrees
@@ -65,5 +66,13 @@ public class PlayerMovement : MonoBehaviour
         {
             GameObject.Find("Game Controller").GetComponent<GameController>().GameOver();
         }
+    }
+
+    private IEnumerator ShootWithDelay()
+    {
+        canShoot = false;
+        Instantiate(bullet, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(shootDelay);
+        canShoot = true;
     }
 }
