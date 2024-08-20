@@ -1542,7 +1542,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 461104366}
         m_TargetAssemblyTypeName: GameControllerMain, Assembly-CSharp
-        m_MethodName: Credits
+        m_MethodName: Controls
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

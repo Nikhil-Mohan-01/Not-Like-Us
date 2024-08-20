@@ -6,44 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
-    public bool Kendrick = false;
-    public bool Nikhil = false;
+    public static string selectedCharacter;
 
     public GameObject KendrickPlayer;
     public GameObject NikhilPlayer;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void KendrickSelect()
     {
-        Kendrick = true;
-        Nikhil = false;
+        selectedCharacter = "Kendrick";
     }
 
     public void NikhilSelect()
     {
-        Kendrick = false;
-        Nikhil = true;
+        selectedCharacter = "Nikhil";
     }
 
     public void LoadPlayer()
     {
-        if (Kendrick)
-        {
-            Instantiate(KendrickPlayer, new Vector3(0, 0, -2), Quaternion.identity);
-        }
-        else
-        {
-            Instantiate(NikhilPlayer, new Vector3(0, 0, -2), Quaternion.identity);
-        }
+        SceneManager.LoadScene("Game");
     }
 }

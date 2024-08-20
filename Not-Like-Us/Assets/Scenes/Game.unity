@@ -2134,6 +2134,8 @@ MonoBehaviour:
   scoreCanvas: {fileID: 894744928}
   spawner: {fileID: 1458239736}
   Score: {fileID: 18299522}
+  KendrickPlayer: {fileID: 6320130906448876334, guid: 7d9c8d29f9b20684cbdb18a1d64dad8b, type: 3}
+  NikhilPlayer: {fileID: 6320130906448876334, guid: d2eb471621fadab4cbaa8f1c93602cf4, type: 3}
 --- !u!4 &1152420646
 Transform:
   m_ObjectHideFlags: 0
@@ -3166,8 +3168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5007729d353675f4f8aaec735486b2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kendrick: 0
-  Nikhil: 0
   KendrickPlayer: {fileID: 6320130906448876334, guid: 7d9c8d29f9b20684cbdb18a1d64dad8b, type: 3}
   NikhilPlayer: {fileID: 6320130906448876334, guid: d2eb471621fadab4cbaa8f1c93602cf4, type: 3}
 --- !u!4 &1452765597
@@ -3218,7 +3218,10 @@ MonoBehaviour:
   - {fileID: 1239212508234986848, guid: 456c02ff6b5104d4d8b1ed7977e1e7c1, type: 3}
   - {fileID: 1239212508234986848, guid: 60d441b255372e34ba580cad2132969f, type: 3}
   - {fileID: 1239212508234986848, guid: 815afae125d609c468faa8cfa8a53ddd, type: 3}
+  - {fileID: 1239212508234986848, guid: a17dbc3d412e08443b7bfe18546ea626, type: 3}
+  - {fileID: 1239212508234986848, guid: 084539e9efdaffd44846976145509755, type: 3}
   height: 2
+  spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1458239738
 Transform:
   m_ObjectHideFlags: 0
@@ -4177,7 +4180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6320130906448876334, guid: 7d9c8d29f9b20684cbdb18a1d64dad8b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

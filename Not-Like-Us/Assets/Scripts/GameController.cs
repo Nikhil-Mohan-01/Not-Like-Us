@@ -13,6 +13,9 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI Score;
     private int score;
 
+    public GameObject KendrickPlayer;
+    public GameObject NikhilPlayer;
+
     void Start()
     {
         Time.timeScale = 1;
@@ -22,6 +25,15 @@ public class GameController : MonoBehaviour
 
         score = 0;
         UpdateScoreText();
+
+        if (CharacterSelection.selectedCharacter == "Kendrick")
+        {
+            Instantiate(KendrickPlayer, new Vector3(0, 0, -2), Quaternion.identity);
+        }
+        else if (CharacterSelection.selectedCharacter == "Nikhil")
+        {
+            Instantiate(NikhilPlayer, new Vector3(0, 0, -2), Quaternion.identity);
+        }
     }
 
     public void GameOver()
