@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public GameObject[] towers;
     public float height;
     private GameController gameController;
+    public Vector3 spawnPosition;
 
     void Start()
     {
@@ -30,13 +31,31 @@ public class Spawner : MonoBehaviour
         if (currentScore < 5)
         {
             towerToSpawn = towers[Random.Range(0, 2)];
+            spawnPosition = new Vector3(5, Random.Range(-height, height), -2);
+        }
+        else if (currentScore < 10)
+        {
+            towerToSpawn = towers[2];
+            spawnPosition = new Vector3(5, Random.Range(-height, height), -2);
         }
         else
         {
-            towerToSpawn = towers[2];
+            towerToSpawn = towers[Random.Range(3, 5)];
+            
+            if (towerToSpawn == towers[3])
+            {
+                spawnPosition = new Vector3(5, -6, -2);
+                Debug.Log("Bottom Spawn");
+            }
+            else
+            {
+                spawnPosition = new Vector3(5, 6, -2);
+                Debug.Log("Top Spawn");
+            }
+            
         }
 
-        Vector3 spawnPosition = new Vector3(5, Random.Range(-height, height), -2);
         Instantiate(towerToSpawn, spawnPosition, Quaternion.identity);
+
     }
 }
