@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "HighTower" || collision.gameObject.tag == "LowTower" || collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "HighTower" || collision.gameObject.tag == "LowTower" || collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Target")
         {
             GameObject.Find("Game Controller").GetComponent<GameController>().GameOver();
         }
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator ShootWithDelay()
     {
         canShoot = false;
-        Instantiate(bullet, transform.position, Quaternion.identity);
+        Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, -1), Quaternion.identity);
         yield return new WaitForSeconds(shootDelay);
         canShoot = true;
     }
