@@ -38,10 +38,10 @@ public class Spawner : MonoBehaviour
             towerToSpawn = towers[2];
             spawnPosition = new Vector3(5, Random.Range(-height, height), -2);
         }
-        else
+        else if (currentScore < 15)
         {
             towerToSpawn = towers[Random.Range(3, 5)];
-            
+
             if (towerToSpawn == towers[3])
             {
                 spawnPosition = new Vector3(5, -6, -2);
@@ -52,7 +52,12 @@ public class Spawner : MonoBehaviour
                 spawnPosition = new Vector3(5, 6, -2);
                 Debug.Log("Top Spawn");
             }
-            
+
+        }
+        else
+        {
+            towerToSpawn = towers[5];
+            spawnPosition = new Vector3(5, Random.Range(-height, height), -2);
         }
 
         Instantiate(towerToSpawn, spawnPosition, Quaternion.identity);

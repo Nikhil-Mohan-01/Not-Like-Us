@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     private AudioManager audioManager;
 
+    public GameObject bullet;
+
     void Start()
     {
         Time.timeScale = 1;
@@ -26,6 +28,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.up * force;
             audioManager.PlayRandomClip();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Shoot");
+            Instantiate(bullet, transform.position, Quaternion.identity);
         }
 
         // Get current rotation in degrees
