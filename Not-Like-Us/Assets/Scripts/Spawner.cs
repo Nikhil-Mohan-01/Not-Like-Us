@@ -54,9 +54,19 @@ public class Spawner : MonoBehaviour
             }
 
         }
-        else
+        else if (currentScore < 20)
         {
             towerToSpawn = towers[5];
+            spawnPosition = new Vector3(5, Random.Range(-height, height), -2);
+        }
+        else if (currentScore < 25)
+        {
+            towerToSpawn = towers[6];
+            spawnPosition = new Vector3(5, Random.Range(-height, height), -2);
+        }
+        else
+        {
+            towerToSpawn = towers[Random.Range(0, 7)];
             spawnPosition = new Vector3(5, Random.Range(-height, height), -2);
         }
 

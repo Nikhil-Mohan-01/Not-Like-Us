@@ -325,3 +325,5 @@ MonoBehaviour:
   rb: {fileID: 0}
   rotationSpeed: 500
   maxRotationAngle: 45
+  bullet: {fileID: 5148779719916625055, guid: bcc5aba26bf13c94b85360e4f5fe58e1, type: 3}
+  shootDelay: 1

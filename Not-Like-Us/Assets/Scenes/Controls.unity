@@ -823,7 +823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Left Mouse Button or SPACE to JUMP
+  m_text: Press Left Mouse Button  SPACE to SHOOT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 526ca92504b1b3e4684135f85d2c3a8a, type: 2}
   m_sharedMaterial: {fileID: 4958750080466434838, guid: 526ca92504b1b3e4684135f85d2c3a8a, type: 2}
