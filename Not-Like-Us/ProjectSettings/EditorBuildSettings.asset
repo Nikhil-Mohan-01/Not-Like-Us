@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 5f3bdc2d6b2d63046b69f75679931305
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/Kendrick.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Drake.unity
+    guid: 9e5d80b3df7949c45902607e0ab9e1c4
   - enabled: 1
     path: Assets/Scenes/Controls.unity
     guid: 43373598a550ba14b91e41ccd291e236

@@ -8,21 +8,29 @@ public class CharacterSelection : MonoBehaviour
 {
     public static string selectedCharacter;
 
-    public GameObject KendrickPlayer;
-    public GameObject NikhilPlayer;
-
     public void KendrickSelect()
     {
         selectedCharacter = "Kendrick";
     }
 
-    public void NikhilSelect()
+    public void DrakeSelect()
     {
-        selectedCharacter = "Nikhil";
+        selectedCharacter = "Drake";
     }
 
     public void LoadPlayer()
     {
-        SceneManager.LoadScene("Game");
+        if (selectedCharacter == "Kendrick")
+        {
+            SceneManager.LoadScene("Kendrick");
+        }
+        if (selectedCharacter == "Drake")
+        {
+            SceneManager.LoadScene("Drake");
+        }
+        else
+        {
+            SceneManager.LoadScene("Kendrick");
+        }
     }
 }
