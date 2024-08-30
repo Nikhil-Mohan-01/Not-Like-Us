@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
             audioManager.PlayRandomClip();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && canShoot)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(1)) && canShoot )
         {
             StartCoroutine(ShootWithDelay());
         }

@@ -66,7 +66,7 @@ public class Spawner : MonoBehaviour
         }
         else
         {
-            towerToSpawn = towers[Random.Range(0, 7)];
+            towerToSpawn = towers[Random.Range(0, 8)];
             spawnPosition = new Vector3(5, Random.Range(-height, height), -2);
         }
 

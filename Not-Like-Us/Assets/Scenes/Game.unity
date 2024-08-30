@@ -3222,6 +3222,7 @@ MonoBehaviour:
   - {fileID: 1239212508234986848, guid: 084539e9efdaffd44846976145509755, type: 3}
   - {fileID: 1239212508234986848, guid: 37b7a25d9256282429af0657d7a19bf1, type: 3}
   - {fileID: 1239212508234986848, guid: 5ca1e37f4a361db45ad960b11c02c142, type: 3}
+  - {fileID: 1239212508234986848, guid: 32e7c816cb51bef4eb278b901f35e0fe, type: 3}
   height: 2
   spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1458239738

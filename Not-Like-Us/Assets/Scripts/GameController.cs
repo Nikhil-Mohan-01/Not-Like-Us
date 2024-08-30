@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
         gameOverCanvas.SetActive(false);
         spawner.SetActive(true);
 
-        score = 0;
+        score = 20;
         UpdateScoreText();
 
         if (CharacterSelection.selectedCharacter == "Kendrick")
@@ -33,6 +33,10 @@ public class GameController : MonoBehaviour
         else if (CharacterSelection.selectedCharacter == "Nikhil")
         {
             Instantiate(NikhilPlayer, new Vector3(0, 0, -2), Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(KendrickPlayer, new Vector3(0, 0, -2), Quaternion.identity);
         }
     }
 
